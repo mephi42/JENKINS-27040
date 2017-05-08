@@ -1,0 +1,22 @@
+1.
+
+    $ docker-compose up
+
+2.
+
+    Go to http://localhost:8080/job/JENKINS-27040/
+    Click "Build Now" and then "Console Output"
+
+3. Expected output:
+
+    + echo USERNAME=dollar$$dollar
+    USERNAME=dollar$$dollar
+    + echo PASSWORD=dollar$$dollar
+    PASSWORD=dollar$$dollar
+
+4. Real output:
+
+    + echo USERNAME=dollar$dollar
+    USERNAME=dollar$dollar
+    + echo PASSWORD=dollar$dollar
+    PASSWORD=dollar$dollar
